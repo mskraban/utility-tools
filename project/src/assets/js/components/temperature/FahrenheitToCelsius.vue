@@ -1,5 +1,5 @@
 <template>
-    <div class="percent-calc calc-01">
+    <div class="percent-calc card-v1 calc-01">
         <div class="calc-01">
             <div class="title">Fahrenheit to Celsius</div>
             <div class="calc">

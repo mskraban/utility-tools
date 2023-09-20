@@ -7,6 +7,7 @@
             <router-link to="/" @click="closeExpand">Home</router-link>
             <router-link to="/percentage-calculator" @click="closeExpand">Percentage calculator</router-link>
             <router-link to="/temperature-converter" @click="closeExpand">Temperature converter</router-link>
+            <router-link to="/weight-converter" @click="closeExpand">Weight converter</router-link>
         </div>
         <div 
             class="menu-icon d-inline-flex d-md-none" 

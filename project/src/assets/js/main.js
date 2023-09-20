@@ -11,6 +11,7 @@ import Navigation from './components/navigation/Navigation.vue'
 import Home from './views/HomePage.vue'
 import PercentCalcPage from './views/PercentCalcPage.vue'
 import TempConvert from './views/TemperatureConverterPage.vue'
+import WeightConvert from './views/WeightConverterPage.vue'
 import About from './views/AboutPage.vue'
 
 
@@ -35,6 +36,11 @@ const routes = [
         path: '/temperature-converter',
         name: 'Temperature converter',
         component: TempConvert
+    },
+    {
+        path: '/weight-converter',
+        name: 'Weight converter',
+        component: WeightConvert
     },
 ]
 

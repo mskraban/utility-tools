@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,200,0,0');
 @import "./bootstrap/scss/bootstrap-grid.scss";
 @import "src/assets/scss/menu/navigation";
 
@@ -73,15 +74,50 @@ body {
     margin-bottom: 2rem;
   }
 
+  .apps {
+    margin-top: 3rem;
+    display: grid;
+    grid-gap: 24px 12px;
+    grid-template-columns: repeat(4, 200px);
 
-  .percent-calc {
+    .app-card {
+      height: 200px;
+      width: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+      text-decoration: none;
+
+      .app-img {
+        height: 100px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #0a0a0a;
+        .material-symbols-outlined {
+          font-size: 64px;
+        }
+      }
+
+      .app-title {
+        font-family: "Unbounded", cursive;
+        text-align: center;
+        color: #0a0a0a;
+        font-size: 16px;
+        line-height: 130%;
+      }
+    }
+  }
+
+  .card-v1 {
     display: flex;
     background: white;
     margin-bottom: 2rem;
     border: 2px solid #0a0a0a;
     padding: 2rem;
     border-radius: 4px;
-    width: 510px;
     transition: all 0.2s ease-in-out;
     position: relative;
 
@@ -103,6 +139,21 @@ body {
       top: 0;
       z-index: -1;
     }
+
+    &:hover {
+      &:after {
+        left: 4px;
+        top: 4px;
+        border-left: none;
+        border-top: none;
+        border-bottom: 4px solid #0a0a0a;
+        border-right: 4px solid #0a0a0a;
+      }
+    }
+  }
+
+  .percent-calc {
+    width: 510px;
 
     &:hover {
       &:after {
@@ -181,7 +232,7 @@ body {
         width: 90px;
         color: #0a0a0a;
         font-family: 'Barlow', sans-serif;
-        transition: all ease-in-out 0.2s;
+        transition: width ease-in-out 0.2s;
         font-size: 16px;
         text-align: center;
 
@@ -190,8 +241,7 @@ body {
         }
 
         &:focus {
-          outline: none;
-          border: 1px solid rgb(0, 0, 0);
+          outline: 1.5px solid darkgray;
         }
       }
     }

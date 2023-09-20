@@ -1,5 +1,5 @@
 <template>
-    <div class="percent-calc">
+    <div class="percent-calc card-v1">
         <div class="calc-04">
             <div class="title">Kelvin to Celsius</div>
             <div class="calc">

@@ -1,19 +1,19 @@
 <template>
     <div class="percent-calc card-v1">
-        <div class="calc-03">
-            <div class="title">Celsius to Kelvin</div>
+        <div class="calc-04">
+            <div class="title">Pound to kilogram</div>
             <div class="calc">
                 <span class="copy">What is</span>
                 <input
                     v-model="number01"
                     type="number"
                     class="number-01"
-                    @input="convertTemperature"
+                    @input="convertWeight()"
                 >
-                <span class="copy">°C in Kelvin?</span>
+                <span class="copy">lbs in kg?</span>
 
                 <span class="result">
-                    {{ animatedResult }} K
+                    {{ animatedResult }} kg
                 </span>
             </div>
         </div>
@@ -24,18 +24,18 @@
 import gsap from "gsap";
 
 export default {
-    name: 'CelsiusToKelvin',
+    name: 'PoundToKilogram',
     data() {
         return {
             number01: null,
-            constant: 273.15,
+            constant: 0.45359237,
             result: 0,
             tweenedNumber: 0,
         };
     },
     computed: {
         animatedResult: function() {
-            return this.tweenedNumber.toFixed(1);
+            return this.tweenedNumber.toFixed(4);
         }
     },
     watch: {
@@ -44,8 +44,8 @@ export default {
         }
     },
     methods: {
-        convertTemperature() {
-            this.result = this.number01 + this.constant;
+        convertWeight() {
+            this.result = this.number01 * this.constant;
         },
     },
 };

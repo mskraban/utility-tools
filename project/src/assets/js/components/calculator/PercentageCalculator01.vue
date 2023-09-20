@@ -1,5 +1,5 @@
 <template>
-    <div class="percent-calc calc-01">
+    <div class="percent-calc card-v1 calc-01">
         <div class="calc-01">
             <div class="title">Get number out of percent</div>
             <div class="calc">
@@ -40,7 +40,7 @@ export default {
     },
     computed: {
         animatedResult: function() {
-            return this.tweenedNumber;
+            return Math.round(this.tweenedNumber * 100) / 100;
         }
     },
     watch: {
