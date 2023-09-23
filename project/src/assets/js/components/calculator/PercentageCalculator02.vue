@@ -38,9 +38,9 @@ export default {
         };
     },
     computed: {
-      animatedResult: function() {
-        return Math.round(this.tweenedNumber * 100) / 100;
-      }
+        animatedResult: function() {
+            return Math.round(this.tweenedNumber * 100) / 100;
+        }
     },
     watch: {
         result: function (newValue) {
