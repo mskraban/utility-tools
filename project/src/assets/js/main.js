@@ -12,6 +12,7 @@ import Home from './views/HomePage.vue'
 import PercentCalcPage from './views/PercentCalcPage.vue'
 import TempConvert from './views/TemperatureConverterPage.vue'
 import WeightConvert from './views/WeightConverterPage.vue'
+import SpeedConvert from './views/SpeedConverterPage.vue'
 import About from './views/AboutPage.vue'
 
 
@@ -41,6 +42,11 @@ const routes = [
         path: '/weight-converter',
         name: 'Weight converter',
         component: WeightConvert
+    },
+    {
+        path: '/speed-converter',
+        name: 'Speed converter',
+        component: SpeedConvert
     },
 ]
 

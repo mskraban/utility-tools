@@ -1,19 +1,19 @@
 <template>
     <div class="percent-calc card-v1 calc-01">
         <div class="calc-01">
-            <div class="title">Kilogram to Pound</div>
+            <div class="title">Kilometers per hour to Miles per hour</div>
             <div class="calc">
                 <span class="copy">What is</span>
                 <input
                     v-model="number01"
                     type="number"
                     class="number-01"
-                    @input="convertWeight()"
+                    @input="convert()"
                 >
-                <span class="copy">kg in pounds?</span>
+                <span class="copy">kmh in mph?</span>
 
                 <span class="result">
-                    {{ animatedResult }} lbs
+                    {{ animatedResult }} mp/h
                 </span>
             </div>
         </div>
@@ -52,11 +52,11 @@
 import gsap from "gsap";
 
 export default {
-    name: 'KilogramToPound',
+    name: 'KilometerToMile',
     data() {
         return {
             number01: null,
-            constant: 0.45359237,
+            constant: 0.6213711922,
             result: 0,
             tweenedNumber: 0,
             settings: [{
@@ -82,8 +82,8 @@ export default {
         }
     },
     methods: {
-        convertWeight() {
-            this.result = this.number01 / this.constant;
+        convert() {
+            this.result = this.number01 * this.constant;
         },
     },
 };

@@ -36,6 +36,17 @@
                     Weight converter
                 </div>
             </router-link>
+            <router-link
+                to="/speed-converter"
+                class="app-card card-v1"
+            >
+                <div class="app-img">
+                    <span class="material-symbols-outlined">speed</span>
+                </div>
+                <div class="app-title">
+                    Speed converter
+                </div>
+            </router-link>
         </section>
     </div>
 </template>

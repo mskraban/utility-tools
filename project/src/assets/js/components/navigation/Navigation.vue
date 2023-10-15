@@ -8,6 +8,7 @@
             <router-link to="/percentage-calculator" @click="closeExpand">Percentage calculator</router-link>
             <router-link to="/temperature-converter" @click="closeExpand">Temperature converter</router-link>
             <router-link to="/weight-converter" @click="closeExpand">Weight converter</router-link>
+            <router-link to="/speed-converter" @click="closeExpand">Speed converter</router-link>
             <div class="made-with">Slasher © {{ currentYear }}</div>
         </div>
         <div 
