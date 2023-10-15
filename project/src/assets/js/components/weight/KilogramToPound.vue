@@ -61,13 +61,19 @@ export default {
             tweenedNumber: 0,
             settings: [{
                 toggled: false,
-                decimalPoint: 4,
+                decimalPoint: 2,
             }],
         };
     },
     computed: {
         animatedResult: function() {
-            return this.tweenedNumber.toFixed(this.settings[0].decimalPoint);
+            if (this.settings[0].decimalPoint < 1) {
+                // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+                this.settings[0].decimalPoint = 1;
+                return this.tweenedNumber.toFixed(1);
+            } else {
+                return this.tweenedNumber.toFixed(this.settings[0].decimalPoint);
+            }
         }
     },
     watch: {

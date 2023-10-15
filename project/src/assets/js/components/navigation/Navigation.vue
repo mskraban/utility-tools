@@ -8,9 +8,10 @@
             <router-link to="/percentage-calculator" @click="closeExpand">Percentage calculator</router-link>
             <router-link to="/temperature-converter" @click="closeExpand">Temperature converter</router-link>
             <router-link to="/weight-converter" @click="closeExpand">Weight converter</router-link>
+            <div class="made-with">Slasher © {{ currentYear }}</div>
         </div>
         <div 
-            class="menu-icon d-inline-flex d-md-none" 
+            class="menu-icon d-inline-flex d-lg-none"
             @click="toggleExpand">
             <input class="menu-icon__cheeckbox" type="checkbox" />
             <div>
@@ -28,7 +29,11 @@ export default {
     data() {
         return {
             expanded: false,
+            currentYear: null,
         };
+    },
+    mounted() {
+        this.getCurrentYear();
     },
     methods: {
         toggleExpand() {
@@ -41,6 +46,9 @@ export default {
         },
         scrollToTop() {
             window.scrollTo(0,0);
+        },
+        getCurrentYear() {
+            return this.currentYear = new Date().getFullYear();
         }
     },
 };

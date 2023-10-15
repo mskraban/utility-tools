@@ -9,10 +9,11 @@ nav {
   align-items: flex-start;
   flex-direction: column;
   border-right: 1px solid #8c8c8c;
-  position: relative;
+  position: fixed;
   transition: all ease-in-out 0.3s;
+  z-index: 100;
 
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(lg) {
     position: fixed;
     top: 0;
     width: 100%;
@@ -66,7 +67,7 @@ nav {
     padding-right: 24px;
     flex-direction: column;
 
-    a {
+    a, .made-with {
       color: rgba(255, 255, 255, 0.8);
       text-decoration: none;
       font-family: 'Unbounded', cursive;
@@ -74,13 +75,20 @@ nav {
       font-size: 12px;
       line-height: 150%;
 
-      @include media-breakpoint-down(md) {
+      @include media-breakpoint-down(lg) {
         font-size: 16px;
       }
 
       &:hover {
         color: rgba(255, 255, 255, 1);
       }
+    }
+
+    .made-with {
+      position: absolute;
+      bottom: 16px;
+      left: 24px;
+      font-size: 10px;
     }
 
     .router-link-active {

@@ -1,7 +1,7 @@
 <template>
     <div class="weight-converter-page">
         <h1>Weight converter</h1>
-        <p class="mb-5">Convert weight.</p>
+        <p class="mb-4">Convert weight.</p>
         <KilogramToPound/>
         <PoundToKilogram/>
     </div>

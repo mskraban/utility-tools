@@ -42,20 +42,25 @@ body {
 .page {
   display: flex;
 
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(lg) {
     display: initial;
   }
 
   .container {
     overflow: hidden;
     padding: 50px 24px;
-    margin-left: 2rem;
+    margin-left: calc(170px + 2rem);
 
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(lg) {
       width: 100%;
       padding-left: 24px;
       padding-right: 24px;
       margin: 56px auto 0;
+    }
+
+    @include media-breakpoint-down(sm) {
+      max-width: 100%;
+      padding: 2rem 1.2rem;
     }
   }
 
@@ -63,10 +68,11 @@ body {
     font-family: 'Unbounded', cursive;
     color: #0a0a0a;
     margin-top: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 
     @include media-breakpoint-down(md) {
       font-size: 28px;
+      margin-bottom: 0.5rem;
     }
   }
 
@@ -86,6 +92,17 @@ body {
     grid-gap: 24px 12px;
     grid-template-columns: repeat(4, 200px);
 
+    @include media-breakpoint-down(md) {
+      grid-template-columns: repeat(3, 140px);
+      grid-gap: 12px;
+      margin-top: 2rem;
+    }
+
+    @include media-breakpoint-down(sm) {
+      grid-template-columns: repeat(2, 140px);
+      grid-gap: 12px;
+    }
+
     .app-card {
       height: 200px;
       width: 200px;
@@ -95,6 +112,11 @@ body {
       flex-direction: column;
       text-decoration: none;
 
+      @include media-breakpoint-down(md) {
+        height: 140px;
+        width: 140px;
+      }
+
       .app-img {
         height: 100px;
         width: 100%;
@@ -102,8 +124,13 @@ body {
         justify-content: center;
         align-items: center;
         color: #0a0a0a;
+
         .material-symbols-outlined {
           font-size: 64px;
+
+          @include media-breakpoint-down(md) {
+            font-size: 36px;
+          }
         }
       }
 
@@ -113,6 +140,10 @@ body {
         color: #0a0a0a;
         font-size: 16px;
         line-height: 130%;
+
+        @include media-breakpoint-down(md) {
+          font-size: 14px;
+        }
       }
     }
   }
@@ -131,6 +162,12 @@ body {
     @include media-breakpoint-down(md) {
       width: 100%;
       padding: 1.25rem;
+      margin-bottom: initial;
+    }
+
+    @include media-breakpoint-down(sm) {
+      max-width: 100%;
+      width: 100%;
     }
 
     &:after {
@@ -198,6 +235,13 @@ body {
         &:before {
           opacity: 1;
         }
+      }
+    }
+
+    input {
+      @include media-breakpoint-down(sm) {
+        max-width: 60px;
+        width: 100%;
       }
     }
   }

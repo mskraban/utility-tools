@@ -1,7 +1,7 @@
 <template>
     <div class="temperature-converter-page">
         <h1>Temperature converter</h1>
-        <p class="mb-5">Convert temperature.</p>
+        <p class="mb-4">Convert temperature.</p>
         <CelsiusToFahrenheit/>
         <FahrenheitToCelsius/>
         <CelsiusToKelvin/>
